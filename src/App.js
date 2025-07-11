@@ -1,11 +1,20 @@
-import React from 'react';
-import TradingJournalForm from './components-mgi/TradingJournalForm';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold text-center mb-8 text-green-500">MGI Candles Trading Journal</h1>
-      <TradingJournalForm />
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          {/* other routes */}
+        </Routes>
+      </main>
     </div>
   );
 }
