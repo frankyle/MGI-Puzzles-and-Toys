@@ -1,0 +1,321 @@
+/* --- General Page & Body Styling --- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Recommended modern font, ensure it's imported or available */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f0f2f5; /* Light background for the whole page */
+    color: #333; /* Default text color */
+}
+
+.about-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+/* --- Header Styling --- */
+.about-header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 5%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 1000; /* Ensure header is on top */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 50px; /* Adjust size to be prominent */
+    margin-right: 15px; /* Space between logo and potential text if any */
+}
+
+.header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-nav li {
+    margin-left: 30px; /* More space between nav items */
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 1.05em;
+    transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: #FF7F50; /* A warmer, playful hover color (e.g., Coral) */
+}
+
+.about-us-button {
+    background-color: #4CAF50; /* A friendly green for the button */
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px; /* More rounded button */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.0em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.about-us-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* --- Main Content Area --- */
+.about-main-content {
+    background-color: #ffffff; /* White card background for the main content block */
+    margin: 30px auto; /* Centered with top/bottom margin */
+    padding: 40px 60px; /* More generous padding */
+    border-radius: 20px; /* More pronounced rounding */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Deeper, softer shadow */
+    width: 90%;
+    max-width: 1200px; /* Max width to prevent it from getting too wide */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* --- About Us Hero Section (Title + Main Image) --- */
+.about-us-hero {
+    text-align: center;
+    margin-bottom: 50px; /* More space before next section */
+}
+
+.about-us-title {
+    font-size: 3.2em; /* Larger, more impactful title */
+    color: #333;
+    margin-bottom: 35px;
+    font-weight: 700;
+    letter-spacing: -0.5px; /* Slightly tighter letter spacing */
+}
+
+.about-us-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 950px; /* Optimal size for the main image */
+    margin: 0 auto;
+    border-radius: 15px; /* Matches the image's subtle rounding */
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image block */
+}
+
+.main-about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tanzania-location-overlay {
+    position: absolute;
+    bottom: 25px; /* Position towards bottom */
+    right: 25px; /* Position towards right */
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly less transparent white */
+    padding: 12px 20px;
+    border-radius: 30px; /* Oval shape */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.tanzania-map-icon {
+    font-size: 1.8em; /* Adjust icon size for react-icons */
+    color: #FF7F50; /* Match a brand color */
+    margin-right: 10px;
+}
+
+.location-text {
+    color: #555;
+}
+
+/* --- Section Title & Text Defaults --- */
+.section-title {
+    font-size: 2.5em; /* Large and clear section titles */
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.section-text {
+    font-size: 1.15em; /* Slightly larger, easier to read text */
+    line-height: 1.7;
+    color: #666;
+    max-width: 850px; /* Constrain text width for readability */
+    margin: 0 auto 20px auto; /* Center text with bottom margin */
+    text-align: center;
+}
+
+
+/* --- Our Story Section --- */
+.our-story-section {
+    padding-top: 40px;
+    border-top: 1px solid #eee; /* Light separator */
+    margin-bottom: 50px;
+}
+
+/* --- Our Mission Section --- */
+.our-mission-section {
+    margin-bottom: 50px;
+}
+
+/* --- Our Core Values Section --- */
+.core-values-section {
+    margin-bottom: 60px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Larger grid items */
+    gap: 35px; /* More space between grid items */
+    margin-top: 30px;
+}
+
+.value-item {
+    background-color: #fefefe; /* Very light background for individual cards */
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08); /* Card shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.value-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
+
+.value-icon {
+    font-size: 3.5em; /* Larger icons */
+    color: #FF7F50; /* A brand accent color for icons */
+    margin-bottom: 20px;
+}
+
+.value-item h3 {
+    font-size: 1.6em; /* Clearer value titles */
+    color: #4CAF50; /* Another brand accent color */
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.value-item p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #777;
+}
+
+/* --- Come See for Yourself Section --- */
+.come-see-section {
+    padding-bottom: 20px; /* Padding at the very bottom */
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    .about-main-content {
+        padding: 30px 40px;
+    }
+    .about-us-title {
+        font-size: 2.8em;
+    }
+    .section-title {
+        font-size: 2em;
+    }
+    .values-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-header {
+        flex-direction: column;
+        padding: 10px 3%;
+    }
+    .header-nav ul {
+        flex-wrap: wrap; /* Allow nav items to wrap */
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .header-nav li {
+        margin: 5px 15px; /* Adjust spacing for wrapped items */
+    }
+    .about-main-content {
+        padding: 25px;
+        margin: 20px 3%;
+    }
+    .about-us-title {
+        font-size: 2.2em;
+        margin-bottom: 25px;
+    }
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .section-text {
+        font-size: 1em;
+        padding: 0 10px; /* Add horizontal padding for smaller screens */
+    }
+    .tanzania-location-overlay {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .tanzania-map-icon {
+        font-size: 1.5em;
+    }
+    .values-grid {
+        grid-template-columns: 1fr; /* Stack core values on small screens */
+        gap: 20px;
+    }
+    .value-item {
+        padding: 20px;
+    }
+    .value-icon {
+        font-size: 3em;
+    }
+    .value-item h3 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-main-content {
+        padding: 15px;
+    }
+    .about-us-title {
+        font-size: 1.8em;
+    }
+    .section-title {
+        font-size: 1.5em;
+    }
+    .header-logo {
+        height: 40px;
+    }
+    .about-us-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
